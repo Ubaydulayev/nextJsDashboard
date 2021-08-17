@@ -1,0 +1,37 @@
+{
+  "name": "nextjs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/styled": "^11.0.0-next.19",
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-brands-svg-icons": "^5.15.4",
+    "@fortawesome/free-regular-svg-icons": "^5.15.4",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.15",
+    "@material-ui/core": "^5.0.0-beta.4",
+    "axios": "^0.21.1",
+    "bootstrap": "^5.0.0-beta3",
+    "next": "11.1.0",
+    "react": "17.0.2",
+    "react-awesome-reveal": "^3.8.1",
+    "react-dom": "17.0.2",
+    "react-redux": "^7.2.4",
+    "reactstrap": "^8.9.0",
+    "redux": "^4.1.1",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.3.0",
+    "styled-components": "^5.3.0"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.13.2",
+    "eslint": "7.32.0",
+    "eslint-config-next": "11.1.0"
+  }
+}
