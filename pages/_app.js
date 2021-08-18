@@ -6,6 +6,10 @@ import Sidebar from "../Sidebar/Sidebar";
 import Headers from "./Headers";
 import { store } from "../Redux/Store";
 
+import "@fortawesome/fontawesome-svg-core/styles.css"; // import Font Awesome CSS
+import { config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false; // Tell Font Awesome to skip adding the CSS automatically since it's being imported above
+
 const GlobalStyle = createGlobalStyle`
 html,
 body{
@@ -50,19 +54,12 @@ a , a:hover {
     border-radius: 20px;
   }
 }
-.bars, .day {
-    width: 30px;
-    height: 30px;
-    color: black;
-  }
 
   .logoAlgo {
     width: 100px;
   }
   .font_icon {
     margin-right: 10px;
-    width: 20px;
-    height: 20px;
   }
 `;
 
