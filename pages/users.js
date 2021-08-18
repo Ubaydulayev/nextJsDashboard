@@ -8,35 +8,46 @@ import {
   TableRow,
 } from "@material-ui/core";
 import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { getUsers } from "../Api";
+import { useSelector } from "react-redux";
 import { setUsers } from "../Redux/Actions";
 
 const users = () => {
-    const dispatch = useDispatch();
 
   useEffect(() => {
-    setUsers(dispatch);
+    setUsers();
   }, []);
-  const data = useSelector(state => users);
+
+  const data = useSelector(state => state.users);
+
   return (
     <div>
       <h1 className="p-5">Users</h1>
-      <TableContainer component={Paper}>
+      {data.length > 0 && <TableContainer component={Paper}>
         <Table>
           <TableHead>
             <TableRow>
-              <TableCell>id</TableCell>
-              <TableCell>name</TableCell>
-              <TableCell>email</TableCell>
+              <TableCell>Id</TableCell>
+              <TableCell>Name</TableCell>
+              <TableCell>Users</TableCell>
+              <TableCell>Email</TableCell>
+              <TableCell>Phone</TableCell>
+              <TableCell>Website</TableCell>
             </TableRow>
           </TableHead>
-          <TableBody></TableBody>
+          <TableBody>
+              {data.map(v => <TableRow>
+              <TableCell>{v.id}</TableCell>
+              <TableCell>{v.name}</TableCell>
+              <TableCell>{v.username}</TableCell>
+              <TableCell>{v.email}</TableCell>
+              <TableCell>{v.phone}</TableCell>
+              <TableCell>{v.website}</TableCell>
+            </TableRow>)}
+          </TableBody>
         </Table>
-      </TableContainer>
+      </TableContainer> || ""}
     </div>
   );
 };
-
 
 export default users;

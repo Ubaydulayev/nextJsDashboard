@@ -1,7 +1,7 @@
 const initialState = {
     users: [],
     sidebarIsShow: true,
-    todos: []
+    todos: [],
 };
 
-export default initialState
+export default initialState;

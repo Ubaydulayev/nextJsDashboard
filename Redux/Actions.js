@@ -1,14 +1,27 @@
 import { getUsers } from "../Api";
 import { SET_USERS } from "./Types";
-import { useDispatch } from "react-redux";
+import { dispatch } from "./Store";
 
 
-
-export const setUsers = async (dispatch) => {
+const setUsers = async () => {
   const res = await getUsers();
-  if (res.succes) {
+  if (res.success) {
     const action = { type: SET_USERS, payload: res.data };
-    dispatch (action);
+    dispatch(action);
   } else {
   }
 };
+
+// const setTodos = async () => {
+//   const res 
+// }
+
+// const setLoading = () => {
+//   dispatch({type: SET_LOADING})
+// }
+
+// const setError = () => {
+//   dispatch({type: SET_ERROR})
+// }
+
+export { setUsers};

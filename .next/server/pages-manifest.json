@@ -3,7 +3,7 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/users": "pages/users.js",
-  "/next/dist/pages/_error": "pages/next/dist/pages/_error.js",
   "/albums": "pages/albums.js",
-  "/todos": "pages/todos.js"
+  "/todos": "pages/todos.js",
+  "/": "pages/index.js"
 }

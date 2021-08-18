@@ -1,8 +1,10 @@
 import "bootstrap/dist/css/bootstrap.css";
 import Head from "next/head";
+import { Provider } from "react-redux";
 import { createGlobalStyle } from "styled-components";
 import Sidebar from "../Sidebar/Sidebar";
 import Headers from "./Headers";
+import { store } from "../Redux/Store";
 
 const GlobalStyle = createGlobalStyle`
 html,
@@ -66,7 +68,7 @@ a , a:hover {
 
 function MyApp({ Component, pageProps }) {
   return (
-    <>
+    <Provider store={store}>
       <GlobalStyle />
       <Head>
         <title>Algorismic</title>
@@ -84,7 +86,7 @@ function MyApp({ Component, pageProps }) {
           <Component {...pageProps} />
         </div>
       </div>
-    </>
+    </Provider>
   );
 }
 
